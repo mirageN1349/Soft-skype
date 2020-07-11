@@ -1,0 +1,46 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-carousel {
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    max-width: 635px;
+    max-height: 360px;
+    img {
+      transform: scale(1.04);
+    }
+  }
+  &-nav {
+    display: flex;
+    margin-top: 20px;
+  }
+  &-button-nav {
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    margin-right: 17px;
+    background: #fff;
+  }
+  &-button-left,
+  &-button-right,
+  &-button-nav {
+    cursor: pointer;
+    user-select: none;
+  }
+  &-button-left {
+    margin-right: 27px;
+  }
+  &-button-right {
+    margin-left: 10px;
+  }
+}
+
+.active-nav {
+  background: $main-color;
+}
+.hidden-nav {
+  background: #fff;
+}

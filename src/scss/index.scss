@@ -1,0 +1,29 @@
+@import '~normalize.css';
+@import '_variables';
+@import 'slider';
+@import 'header';
+@import 'program';
+@import 'tags';
+@import 'footer';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ecf4f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

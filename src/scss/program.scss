@@ -1,0 +1,153 @@
+.program {
+  margin: 50px 0;
+  margin-top: 140px;
+  &-wrap {
+    background: $color-white;
+    border-radius: 20px;
+    padding: 20px 30px 50px 30px;
+    box-shadow: $box-shadow;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+  }
+  &-info {
+    display: flex;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+  }
+  &-logo {
+    width: 58px;
+    height: 58px;
+    margin-right: 17px;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &-alike {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-top: 5px;
+  }
+  &-like {
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 37px;
+    font-size: 18px;
+    img {
+      transition: 0.2s;
+      margin-right: 7px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    span {
+      margin-top: 4px;
+    }
+  }
+
+  &-main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  tbody {
+    display: table-row-group;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: 'Segoe UI';
+    color: $text-color;
+    margin-top: 22px;
+  }
+  tr {
+    display: table-row;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  th,
+  td {
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  &-description {
+    margin-top: 66px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    &__text {
+      transition: 0.7s;
+      max-height: 150px;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    &__blur {
+      position: absolute;
+      width: 1184px;
+      height: 52px;
+      left: -20px;
+      top: 73%;
+      transition: 0.7s;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 1)
+      );
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      transition: 0.7s;
+      border: 1px solid $border-color;
+      outline: none;
+      color: $main-color;
+      border-radius: 5px;
+      background: $color-white;
+      padding: 7px 9px;
+      cursor: pointer;
+      span {
+        margin-left: 6px;
+      }
+      &:hover {
+        background: #909090;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.active-btn {
+  max-height: 500px;
+}
+
+.active-blur {
+  top: 100%;
+}
