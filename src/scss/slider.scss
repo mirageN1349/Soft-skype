@@ -24,6 +24,9 @@
     margin-right: 17px;
     background: #fff;
   }
+  &-button-nav.active {
+    background: $main-color;
+  }
   &-button-left,
   &-button-right,
   &-button-nav {
@@ -36,11 +39,10 @@
   &-button-right {
     margin-left: 10px;
   }
-}
-
-.active-nav {
-  background: $main-color;
-}
-.hidden-nav {
-  background: #fff;
+  .slide {
+    display: none;
+  }
+  .slide.active {
+    display: block;
+  }
 }

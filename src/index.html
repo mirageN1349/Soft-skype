@@ -9,7 +9,9 @@
     <header class="header">
       <div class="container">
         <div class="header-wrap">
-          <h1 class="header-title">SoftЧто-то</h1>
+          <h1 class="header-title">
+            SoftЧто-то
+          </h1>
           <nav class="header-nav">
             <a href="#" class="header-link">Программы</a>
             <a href="#" class="header-link">Категории</a>
@@ -78,13 +80,22 @@
             <div class="program-slider">
               <div class="slider">
                 <div class="slider-carousel">
-                  <img src="../src/img/skype-slider.png" alt="Skype" />
+                  <div class="slide animate__animated active">
+                    <img src="../src/img/skype-slider.png" alt="Skype" />
+                  </div>
+                  <div class="slide animate__animated">
+                    <img src="../src/img/skype-two-slider.png" alt="Skype" />
+                  </div>
+                  <div class="slide animate__animated">
+                    <img src="../src/img/skype-three-slider.png" alt="Skype" />
+                  </div>
                 </div>
+
                 <div class="slider-nav">
                   <div class="slider-button-left">
                     <img src="../src/img/slider-button-left.svg" alt="left" />
                   </div>
-                  <div class="slider-button-nav"></div>
+                  <div class="slider-button-nav opacity active"></div>
                   <div class="slider-button-nav"></div>
                   <div class="slider-button-nav"></div>
                   <div class="slider-button-right">
@@ -208,6 +219,7 @@
           <div class="footer-mail">
             <span>Контакты:</span>
             <img src="../src/img/mail.svg" alt="" />
+            <!-- FIXME: -->
             <mail>support@msetup.pro</mail>
           </div>
         </div>
