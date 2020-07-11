@@ -54,6 +54,7 @@ function nextSlide(check = true) {
 }
 
 function prevSlide() {
+  clearInterval(interval)
   if (counter === 0) {
     counter = slides.length - 1
     currentSlide(counter)
