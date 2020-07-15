@@ -6,18 +6,15 @@ const navBtn = document.querySelectorAll('.slider-button-nav'),
 
 let counter = 0
 
-navRight.addEventListener('click', nextSlide(true))
+navRight.addEventListener('click', nextSlide)
 navLeft.addEventListener('click', prevSlide)
 
 navBtn.forEach((btn, index) => {
   btn.addEventListener('click', () => {
     currentSlide(index)
     counter = index
-    clearInterval(interval)
   })
 })
-
-const interval = setInterval(nextSlide(false), 3000)
 
 function activeSlide(index) {
   slides.forEach(slide => {
@@ -41,20 +38,16 @@ function currentSlide(index) {
 }
 
 function nextSlide(check = true) {
-  return function () {
-    check ? clearInterval(interval) : false
-    if (counter === slides.length - 1) {
-      counter = 0
-      currentSlide(counter)
-    } else {
-      counter++
-      currentSlide(counter)
-    }
+  if (counter === slides.length - 1) {
+    counter = 0
+    currentSlide(counter)
+  } else {
+    counter++
+    currentSlide(counter)
   }
 }
 
 function prevSlide() {
-  clearInterval(interval)
   if (counter === 0) {
     counter = slides.length - 1
     currentSlide(counter)

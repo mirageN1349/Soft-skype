@@ -11,7 +11,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat';
     font-size: 14px;
   }
   &-info {
@@ -81,7 +80,6 @@
   table {
     border-collapse: collapse;
     border-spacing: 0;
-    font-family: 'Segoe UI';
     color: $text-color;
     margin-top: 22px;
   }
@@ -98,7 +96,6 @@
 
   &-description {
     margin-top: 66px;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
