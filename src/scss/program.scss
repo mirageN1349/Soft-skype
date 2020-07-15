@@ -48,6 +48,7 @@
   }
   &-like {
     border: 1px solid $border-color;
+    transition: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +68,10 @@
       margin-top: 4px;
     }
   }
-
+  &-like.active {
+    background: rgb(219, 219, 219);
+    color: tomato;
+  }
   &-main {
     margin-top: 60px;
     display: flex;
