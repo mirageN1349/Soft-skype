@@ -1,6 +1,7 @@
 .footer {
   background: $color-white;
-  font-size: 18px;
+  font-size: 16px;
+  color: #a0a0a0;
   &-wrap {
     text-align: center;
     padding: 28px 0;
@@ -16,7 +17,6 @@
     font-weight: 600;
     font-size: 16px;
     a {
-      color: #000;
       text-decoration: none;
     }
     img {
