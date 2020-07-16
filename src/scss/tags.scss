@@ -29,13 +29,46 @@
     flex-basis: 100%;
   }
   &-item {
-    padding: 3px 10px 7px 10px;
+    padding: 5px 10px 5px 10px;
     background: $main-color;
     border-radius: 5px;
     margin-right: 16px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     font-weight: normal;
     font-size: 16px;
     color: $color-white;
+  }
+}
+
+@media (max-width: 768px) {
+  .tags {
+    &-wrap {
+      background: none;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    &-title {
+      font-family: Montserrat;
+      font-size: 14px;
+    }
+
+    &-category,
+    &-platform,
+    &-function {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &-item {
+      background: $color-mobile;
+
+      font-weight: normal;
+      font-size: 14px;
+      color: $text-color;
+    }
   }
 }

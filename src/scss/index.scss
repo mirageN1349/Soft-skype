@@ -3,6 +3,7 @@
 @import '_variables';
 @import 'slider';
 @import 'header';
+@import 'burger';
 @import 'program';
 @import 'tags';
 @import 'footer';
@@ -28,4 +29,20 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+  body {
+    background: $color-white;
+  }
+  .container {
+    padding: 15px;
+  }
+  .program-logo,
+  .burger-btn {
+    display: block !important;
+  }
 }

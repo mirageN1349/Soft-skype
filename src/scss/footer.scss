@@ -26,3 +26,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    background: $color-mobile;
+    font-size: 12px;
+    &-wrap {
+      text-align: center;
+      padding: 0;
+    }
+    &-mail {
+      font-size: 12px;
+    }
+  }
+}

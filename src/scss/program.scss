@@ -1,6 +1,7 @@
 .program {
-  margin: 50px 0;
+  margin: 50px auto;
   margin-top: 110px;
+
   &-wrap {
     background: $color-white;
     border-radius: 20px;
@@ -43,7 +44,7 @@
     }
   }
   &-like {
-    border: 1px solid $border-color;
+    box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.19);
     transition: 0.3s;
     display: flex;
     align-items: center;
@@ -52,10 +53,10 @@
     width: 90px;
     height: 37px;
     font-size: 16px;
+    cursor: pointer;
     img {
       transition: 0.2s;
       margin-right: 7px;
-      cursor: pointer;
       &:hover {
         transform: scale(1.1);
       }
@@ -65,7 +66,7 @@
     }
   }
   &-like.active {
-    background: rgb(219, 219, 219);
+    background: rgb(243, 243, 243);
     color: $main-color;
   }
   &-main {
@@ -100,6 +101,7 @@
     font-weight: normal;
     font-size: 16px;
     &__text {
+      position: relative;
       transition: 0.7s;
       max-height: 150px;
       height: auto;
@@ -108,43 +110,117 @@
     }
     &__blur {
       position: absolute;
-      width: 1184px;
-      height: 52px;
-      left: -20px;
-      top: 73%;
       transition: 0.7s;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 1)
-      );
+      top: 13px;
+      left: -120px;
     }
     &__button {
-      display: flex;
-      align-items: center;
-      transition: 0.7s;
-      border: 1px solid $border-color;
+      margin-top: 5px;
       outline: none;
-      color: $main-color;
-      border-radius: 5px;
+      transition: 0.4s;
+      border: none;
+      color: $text-color;
       background: $color-white;
-      padding: 7px 9px;
+      width: 130px;
+      height: 35px;
+      font-size: 14px;
       cursor: pointer;
+      box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.15);
+      border-radius: 5px;
       span {
-        margin-left: 6px;
+        margin-right: 6px;
+      }
+      img {
+        margin-top: 3px;
+        transition: 0.4s;
+      }
+      img.active {
+        transform: rotate(180deg);
       }
       &:hover {
-        background: #909090;
-        color: $color-white;
+        background: rgb(241, 241, 241);
       }
     }
   }
 }
-
+//FIXME:
 .active-btn {
   max-height: 500px;
 }
-
+//FIXME:
 .active-blur {
   top: 100%;
+}
+
+@media (max-width: 768px) {
+  .program {
+    margin: 0;
+    &-main {
+      margin: 0;
+      justify-content: center;
+    }
+    &-wrap {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    &-info {
+      display: none;
+    }
+    &-like {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      left: 83%;
+      top: 243px;
+      font-size: 12px;
+      background: $color-white;
+      border-radius: 50%;
+      flex-direction: column;
+      img {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+    &-description {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 40px;
+      &__text {
+        text-align: left;
+      }
+      &__button {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        &:hover {
+          background: $color-white;
+        }
+      }
+    }
+    table {
+      border-collapse: separate;
+      empty-cells: hide;
+      color: $text-color;
+      font-size: 12px;
+      border: 3px solid rgba(33, 150, 243, 0.15);
+      border-radius: 10px;
+      width: 100%;
+    }
+    th,
+    td {
+      padding-bottom: 7px;
+      padding-top: 7px;
+    }
+
+    th {
+      width: 50%;
+      padding-right: 0;
+    }
+  }
 }
