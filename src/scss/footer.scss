@@ -37,6 +37,17 @@
     }
     &-mail {
       font-size: 12px;
+      flex-wrap: wrap;
+      font-weight: normal;
+      color: #504e4e;
+      span {
+        flex-basis: 100%;
+      }
+    }
+    &-text {
+      color: $border-color;
+      margin-bottom: 20px;
+      min-width: 243px;
     }
   }
 }

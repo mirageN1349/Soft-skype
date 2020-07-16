@@ -11,10 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const blur = document.querySelector('.program-description__blur')
   const headerTitle = document.querySelector('.header-title')
   const input = document.querySelector('.header-input')
+  const hide = document.querySelectorAll('.hide')
 
   btnMore.addEventListener('click', btnMoreClick)
 
   if (document.documentElement.clientWidth <= 768) {
+    hide.forEach(el => (el.style.display = 'none'))
     input.setAttribute('disable', true)
     input.addEventListener('click', inputClick)
     function inputClick() {

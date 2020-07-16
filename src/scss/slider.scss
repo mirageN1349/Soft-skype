@@ -49,18 +49,17 @@
 @media (max-width: 768px) {
   .slider {
     margin-top: 60px;
-
+    &-carousel,
+    &-carousel img {
+      max-width: 350px;
+      max-height: 214px;
+    }
     &-carousel {
       border-radius: 10px;
       box-shadow: $box-shadow;
       overflow: hidden;
-      max-width: 290px;
-      max-height: 174px;
+
       box-shadow: none;
-      img {
-        width: 290px;
-        height: 174px;
-      }
     }
     &-nav {
       margin-top: 20px;

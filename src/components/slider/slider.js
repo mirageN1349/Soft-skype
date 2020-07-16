@@ -37,7 +37,7 @@ function currentSlide(index) {
   activeNavBtn(index)
 }
 
-function nextSlide(check = true) {
+function nextSlide() {
   if (counter === slides.length - 1) {
     counter = 0
     currentSlide(counter)
