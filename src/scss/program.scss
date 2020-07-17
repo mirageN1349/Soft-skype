@@ -54,20 +54,26 @@
     height: 37px;
     font-size: 16px;
     cursor: pointer;
-    img {
+    &__img {
       transition: 0.2s;
-      margin-right: 7px;
+      margin-right: 3px;
+      width: 40px;
+      height: 25px;
+      fill: $main-color;
       &:hover {
         transform: scale(1.1);
       }
     }
+    &__img.active {
+      fill: $color-white;
+    }
     span {
-      margin-top: 1px;
+      margin-top: 3px;
     }
   }
   &-like.active {
-    background: rgb(243, 243, 243);
-    color: $main-color;
+    background: $main-color;
+    color: $color-white;
   }
   &-main {
     margin-top: 60px;
@@ -108,11 +114,17 @@
       overflow: hidden;
       position: relative;
     }
+    &__text.active {
+      max-height: 500px;
+    }
     &__blur {
       position: absolute;
       transition: 0.7s;
       top: 13px;
       left: -120px;
+    }
+    &__blur.active {
+      top: 100%;
     }
     &__button {
       margin-top: 5px;
@@ -125,7 +137,7 @@
       height: 35px;
       font-size: 14px;
       cursor: pointer;
-      box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.15);
+      box-shadow: 0px 4px 6px rgba(100, 101, 109, 0.15);
       border-radius: 5px;
       span {
         margin-right: 6px;
@@ -142,14 +154,6 @@
       }
     }
   }
-}
-//FIXME:
-.active-btn {
-  max-height: 500px;
-}
-//FIXME:
-.active-blur {
-  top: 100%;
 }
 
 @media (max-width: 768px) {
@@ -168,6 +172,7 @@
     &-info {
       display: none;
     }
+
     &-like {
       position: absolute;
       width: 55px;
@@ -178,10 +183,12 @@
       background: $color-white;
       border-radius: 50%;
       flex-direction: column;
-      img {
+      box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.15);
+      &__img {
         width: 18px;
         height: 18px;
         margin: 0;
+
         &:hover {
           transform: none;
         }
@@ -191,9 +198,10 @@
       margin-top: 20px;
       font-size: 16px;
       text-align: center;
-      margin-bottom: 40px;
       &__text {
         text-align: left;
+        font-family: 'Montserrat';
+        color: $text-color;
       }
       &__button {
         margin-top: 5px;

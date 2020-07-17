@@ -4,7 +4,7 @@ export function localStorageHelper() {
       localStorage.setItem(nameItem, JSON.stringify(body))
     },
     getItem(nameItem) {
-      return parseInt(JSON.parse(localStorage.getItem(nameItem)))
+      return JSON.parse(localStorage.getItem(nameItem))
     },
   }
 }

@@ -5,33 +5,36 @@ import './components/like/like'
 import './components/burger/burger'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const btnMore = document.querySelector('.program-description__button')
-  const btnMoreImg = document.querySelector('.program-description__button img')
-  const descriptionText = document.querySelector('.program-description__text')
-  const blur = document.querySelector('.program-description__blur')
-  const headerTitle = document.querySelector('.header-title')
-  const input = document.querySelector('.header-input')
-  const hide = document.querySelectorAll('.hide')
+  const btnMore = document.querySelector('.program-description__button'),
+    btnMoreImg = document.querySelector('.program-description__button img'),
+    descriptionText = document.querySelector('.program-description__text'),
+    blur = document.querySelector('.program-description__blur'),
+    headerTitle = document.querySelector('.header-title'),
+    input = document.querySelector('.header-input'),
+    hide = document.querySelectorAll('.hide')
 
   btnMore.addEventListener('click', btnMoreClick)
 
   if (document.documentElement.clientWidth <= 768) {
+    headerTitle.textContent = 'Skype'
+
     hide.forEach(el => (el.style.display = 'none'))
-    input.setAttribute('disable', true)
+
+    input.setAttribute('readonly', '')
     input.addEventListener('click', inputClick)
-    function inputClick() {
-      input.setAttribute('disable', false)
+    function inputClick(e) {
+      input.getAttribute('readonly') !== null
+        ? input.removeAttribute('readonly')
+        : input.setAttribute('readonly', '')
+      input.value = ''
+
       input.classList.toggle('active')
     }
   }
 
   function btnMoreClick() {
-    blur.classList.toggle('active-blur')
-    descriptionText.classList.toggle('active-btn')
+    blur.classList.toggle('active')
+    descriptionText.classList.toggle('active')
     btnMoreImg.classList.toggle('active')
-  }
-
-  if (document.documentElement.clientWidth <= 768) {
-    headerTitle.textContent = 'Skype'
   }
 })
