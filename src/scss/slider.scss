@@ -64,6 +64,11 @@
 
       box-shadow: none;
     }
+    .slide {
+      img {
+        max-width: 100%;
+      }
+    }
     &-nav {
       margin-top: 20px;
     }

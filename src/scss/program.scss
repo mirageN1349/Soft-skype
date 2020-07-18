@@ -211,7 +211,9 @@
         }
       }
       &__blur {
-        display: none;
+        img {
+          display: none;
+        }
       }
     }
     table {
