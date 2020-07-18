@@ -2,12 +2,14 @@ const navBtn = document.querySelectorAll('.slider-button-nav'),
   navRight = document.querySelector('.slider-button-right'),
   navLeft = document.querySelector('.slider-button-left'),
   slides = document.querySelectorAll('.slide'),
-  carousel = document.querySelector('.slider-carousel')
+  carousel = document.querySelector('.slider-carousel'),
+  slide = document.querySelector('.slide')
 
 let counter = 0
 
 navRight.addEventListener('click', nextSlide)
 navLeft.addEventListener('click', prevSlide)
+slide.addEventListener('touchstart', touchStartSlide)
 
 navBtn.forEach((btn, index) => {
   btn.addEventListener('click', () => {
@@ -54,5 +56,22 @@ function prevSlide() {
   } else {
     counter--
     currentSlide(counter)
+  }
+}
+
+function touchStartSlide(e) {
+  let startX = e.changedTouches[0].clientX
+  let thisX = 0
+  document.ontouchmove = e => {
+    thisX = e.changedTouches[0].clientX
+  }
+  document.ontouchend = () => {
+    if (startX < thisX + 50) {
+      nextSlide()
+    } else if (startX > thisX + 50) {
+      prevSlide()
+    } else {
+      return
+    }
   }
 }

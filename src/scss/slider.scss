@@ -40,6 +40,9 @@
   }
   .slide {
     display: none;
+    img {
+      user-select: none;
+    }
   }
   .slide.active {
     display: block;
