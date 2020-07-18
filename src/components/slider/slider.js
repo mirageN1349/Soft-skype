@@ -62,16 +62,18 @@ function prevSlide() {
 function touchStartSlide(e) {
   let startX = e.changedTouches[0].clientX
   let thisX = 0
+
   document.ontouchmove = e => {
     thisX = e.changedTouches[0].clientX
   }
-  document.ontouchend = () => {
-    if (startX < thisX + 50) {
+
+  document.ontouchend = e => {
+    if (e.target.getAttribute('alt') !== 'Skype') return
+
+    if (startX < thisX) {
       nextSlide()
-    } else if (startX > thisX + 50) {
+    } else if (startX > thisX) {
       prevSlide()
-    } else {
-      return
     }
   }
 }

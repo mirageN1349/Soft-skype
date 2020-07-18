@@ -210,6 +210,9 @@
           background: $color-white;
         }
       }
+      &__blur {
+        display: none;
+      }
     }
     table {
       border-collapse: separate;
