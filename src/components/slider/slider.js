@@ -20,7 +20,6 @@ navBtn.forEach((btn, index) => {
 
 function activeSlide(index) {
   slides.forEach(slide => {
-    slide.classList.remove('animate__fadeOutRight')
     slide.classList.remove('active')
   })
   slides[index].classList.add('active')
