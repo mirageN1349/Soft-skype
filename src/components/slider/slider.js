@@ -71,9 +71,9 @@ function touchStartSlide(e) {
     if (e.target.getAttribute('alt') !== 'Skype') return
 
     if (startX < thisX) {
-      nextSlide()
-    } else if (startX > thisX) {
       prevSlide()
+    } else if (startX > thisX) {
+      nextSlide()
     }
   }
 }
