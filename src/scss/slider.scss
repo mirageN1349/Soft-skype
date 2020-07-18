@@ -54,7 +54,7 @@
     margin-top: 60px;
     &-carousel,
     &-carousel img {
-      max-width: 350px;
+      max-width: 100%;
       max-height: 214px;
     }
     &-carousel {
@@ -64,11 +64,7 @@
 
       box-shadow: none;
     }
-    .slide {
-      img {
-        max-width: 100%;
-      }
-    }
+
     &-nav {
       margin-top: 20px;
     }
