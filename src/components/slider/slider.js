@@ -26,12 +26,14 @@ navBtn.forEach((btn, index) => {
   })
 })
 
-function activeSlide(index) {
+function activeSlide(index, state = false) {
   slides.forEach(slide => {
     slide.classList.remove('active')
   })
   slides[index].classList.add('active')
-  slides[index].classList.add('animate__zoomIn')
+  slides[index].classList.add(
+    `${state === 'next' ? 'animate__backInRight' : 'animate__backInLeft'}`
+  )
 }
 
 function activeNavBtn(index) {
@@ -41,18 +43,18 @@ function activeNavBtn(index) {
   navBtn[index].classList.add('active')
 }
 
-function currentSlide(index) {
-  activeSlide(index)
+function currentSlide(index, state) {
+  activeSlide(index, state)
   activeNavBtn(index)
 }
 
 function nextSlide() {
   if (counter === slides.length - 1) {
     counter = 0
-    currentSlide(counter)
+    currentSlide(counter, 'next')
   } else {
     counter++
-    currentSlide(counter)
+    currentSlide(counter, 'next')
   }
 }
 
@@ -71,13 +73,14 @@ function touchStartSlide(e) {
   let thisX = 0
 
   document.ontouchmove = e => {
+    document.body.style.overflowY = 'hidden'
     thisX = e.changedTouches[0].clientX
   }
 
   document.ontouchend = e => {
+    document.body.style.overflowY = 'auto'
     if (e.target.getAttribute('alt') !== 'Skype') return
     if (thisX === 0) return
-
     if (startX < thisX) {
       prevSlide()
     } else if (startX > thisX) {
