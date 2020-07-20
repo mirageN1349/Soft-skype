@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     input.setAttribute('readonly', '')
     input.addEventListener('click', inputClick)
-    function inputClick(e) {
+
+    function inputClick() {
       input.getAttribute('readonly') !== null
         ? input.removeAttribute('readonly')
         : input.setAttribute('readonly', '')

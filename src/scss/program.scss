@@ -177,8 +177,8 @@
       position: absolute;
       width: 55px;
       height: 55px;
-      left: 83%;
-      top: 243px;
+      left: 77%;
+      top: 255px;
       font-size: 14px;
       background: $color-white;
       border-radius: 50%;
@@ -208,11 +208,6 @@
         margin-bottom: 15px;
         &:hover {
           background: $color-white;
-        }
-      }
-      &__blur {
-        img {
-          display: none;
         }
       }
     }

@@ -11,6 +11,14 @@ navRight.addEventListener('click', nextSlide)
 navLeft.addEventListener('click', prevSlide)
 slide.addEventListener('touchstart', touchStartSlide)
 
+document.addEventListener('keyup', e => {
+  if (e.key === 'ArrowRight') {
+    nextSlide()
+  } else if (e.key === 'ArrowLeft') {
+    prevSlide()
+  }
+})
+
 navBtn.forEach((btn, index) => {
   btn.addEventListener('click', () => {
     currentSlide(index)
@@ -68,6 +76,7 @@ function touchStartSlide(e) {
 
   document.ontouchend = e => {
     if (e.target.getAttribute('alt') !== 'Skype') return
+    if (thisX === 0) return
 
     if (startX < thisX) {
       prevSlide()
