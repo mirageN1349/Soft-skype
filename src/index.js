@@ -24,10 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('click', inputClick)
 
     function inputClick() {
-      input.getAttribute('readonly') !== null
-        ? input.removeAttribute('readonly')
-        : input.setAttribute('readonly', '')
-      input.focus()
+      // input.getAttribute('readonly') !== null
+      //   ? input.removeAttribute('readonly')
+      //   : input.setAttribute('readonly', '')
       input.value = ''
 
       input.classList.toggle('active')
