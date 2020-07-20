@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hide.forEach(el => (el.style.display = 'none'))
 
-    input.setAttribute('readonly', '')
     input.addEventListener('click', inputClick)
 
     function inputClick() {
