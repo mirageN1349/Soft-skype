@@ -73,6 +73,7 @@ function touchStartSlide(e) {
   let thisX = 0
 
   document.ontouchmove = e => {
+    if (e.target.getAttribute('alt') !== 'Skype') return
     document.body.style.overflowY = 'hidden'
     thisX = e.changedTouches[0].clientX
   }
