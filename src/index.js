@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.getAttribute('readonly') !== null
         ? input.removeAttribute('readonly')
         : input.setAttribute('readonly', '')
-      input.getAttribute('autofocus') !== null
-        ? input.removeAttribute('autofocus')
-        : input.setAttribute('autofocus', '')
+      input.focus()
       input.value = ''
 
       input.classList.toggle('active')

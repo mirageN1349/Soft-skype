@@ -68,6 +68,7 @@
       fill: $color-white;
     }
     span {
+      user-select: none;
       margin-top: 3px;
     }
   }
