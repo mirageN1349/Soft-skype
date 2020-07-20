@@ -29,12 +29,12 @@ navBtn.forEach((btn, index) => {
 function activeSlide(index, state = false) {
   slides.forEach(slide => {
     slide.classList.remove('active')
-    slide.classList.remove('animate__backInRight')
-    slide.classList.remove('animate__backInLeft')
+    slide.classList.remove('animate__slideInRight')
+    slide.classList.remove('animate__slideInLeft')
   })
   slides[index].classList.add('active')
   slides[index].classList.add(
-    `${state === 'next' ? 'animate__backInRight' : 'animate__backInLeft'}`
+    `${state === 'next' ? 'animate__slideInRight' : 'animate__slideInLeft'}`
   )
 }
 
