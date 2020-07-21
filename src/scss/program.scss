@@ -176,20 +176,11 @@
 
     &-like {
       position: absolute;
-      width: 55px;
-      height: 55px;
-      left: 77%;
-      top: 255px;
-      font-size: 14px;
-      background: $color-white;
-      border-radius: 50%;
-      flex-direction: column;
-      box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.15);
+      left: calc(50% - 45px);
+      top: 305px;
       &__img {
-        width: 18px;
-        height: 18px;
-        margin: 0;
-
+        width: 22px;
+        height: 22px;
         &:hover {
           transform: none;
         }
@@ -203,6 +194,9 @@
         text-align: left;
         font-family: 'Montserrat';
         color: $text-color;
+      }
+      &__text.active {
+        max-height: 2000px;
       }
       &__button {
         margin-top: 5px;
