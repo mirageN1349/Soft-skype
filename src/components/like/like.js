@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function likeClick(check) {
     return function () {
+      if (check) like.disabled = true
+
       const softName = 'skype'
       getRequest(softName, check)
     }
@@ -72,11 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
           counter,
           softName,
         }
-        putRequest(text, softName)
+        putRequest(text, softName, currentLike)
       })
   }
 
-  function putRequest(text, softName) {
-    Like.create(text, softName)
+  function putRequest(text, softName, currentLike) {
+    Like.create(text, softName).then(() => {
+      currentLike.disabled = false
+    })
   }
 })
