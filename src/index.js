@@ -1,7 +1,9 @@
 import './scss/index.scss'
 import './components/button/m-400'
 import './components/slider/slider'
-import './components/like/like'
+import './components/like/like.logic'
+import './components/navbar/navbar.logic'
+import './components/search/search.logic'
 import './components/burger/burger'
 
 document.addEventListener('DOMContentLoaded', () => {
